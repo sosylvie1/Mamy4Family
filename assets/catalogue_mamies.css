@@ -1,0 +1,174 @@
+
+.hero {
+    background-color: #f7efe0;
+    color: #333;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+  }
+
+
+h1 {
+  text-align: center;
+  color: #7f674d;
+  margin: 20px 0;
+}
+
+.catalogue-page {
+  display: flex;
+  flex-direction: column; /* Mobile-first: colonnes empilées */
+  gap: 20px;
+  padding: 20px;
+}
+
+.catalogue-column,
+.search-column {
+  width: 100%; /* Par défaut, occupe toute la largeur */
+}
+
+/* Catalogue Container */
+.catalogue-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.mamie-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.mamie-card:hover {
+  transform: translateY(-5px);
+}
+
+.mamie-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #7f674d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7f674d;
+}
+
+/* Recherche Container */
+.search-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.search-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.btn-search {
+  width: 100%;
+  padding: 12px;
+  background-color: #7f674d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-search:hover {
+  background-color: #7f674d;
+}
+
+/* Responsive Styles */
+
+/* Tablette (min-width: 768px) */
+@media (min-width: 768px) {
+  .catalogue-page {
+    flex-direction: row; /* Affiche en deux colonnes */
+  }
+
+  .catalogue-column {
+    width: 70%; /* Colonne catalogue : 70% */
+  }
+
+  .search-column {
+    width: 30%; /* Colonne recherche : 30% */
+  }
+
+  .mamie-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .mamie-card {
+    max-width: none; /* Retire la largeur max pour uniformité */
+  }
+}
+
+/* PC (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .catalogue-container {
+    justify-content: flex-start; /* Alignement à gauche */
+    gap: 30px;
+  }
+
+  .mamie-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .mamie-card {
+    flex: 1 1 calc(33.333% - 40px); /* Trois cartes par ligne */
+  }
+
+  .search-container {
+    position: sticky;
+    top: 20px; /* Reste visible lors du scroll */
+  }
+}

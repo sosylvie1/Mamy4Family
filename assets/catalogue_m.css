@@ -1,0 +1,86 @@
+/* Conteneur scrollable horizontal */
+.hero {
+    background-color: #f7efe0;
+    color: #333;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+  }
+.catalogue-scroll-container {
+    display: flex;
+    overflow-x: auto; /* Activer le défilement horizontal */
+    gap: 20px; /* Espacement entre les cartes */
+    padding: 20px;
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
+.catalogue-scroll-container::-webkit-scrollbar {
+    height: 8px; /* Hauteur de la barre de défilement */
+}
+
+.catalogue-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #7f674d; /* Couleur de la barre */
+    border-radius: 10px;
+}
+
+.catalogue-scroll-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Style des cartes */
+.mamie-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    width: 250px; /* Largeur de chaque carte */
+    flex-shrink: 0; /* Empêcher les cartes de rétrécir */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+
+
+.mamie-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.mamie-card h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.mamie-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Bouton */
+button {
+    background-color: #7f674d ;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+}
+
+button:hover {
+    background-color: #d67f21c3 ;
+}

@@ -1,0 +1,183 @@
+/* Global */
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+} */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Empêche les débordements horizontaux */
+}
+h1,
+h2 {
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+.mamie-header {
+  background-color: #f7efe0;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 20px;
+}
+
+.mamie-header h1 {
+  font-size: 2.5em;
+}
+
+.mamie-header p {
+  font-size: 1.2em;
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  flex-direction: column; /* Mobile-first */
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Colonne gauche */
+.profile-left {
+  text-align: center;
+  flex: 1;
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-info {
+  margin-top: 20px;
+}
+
+.profile-info li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.profile-info li i {
+  color: #ff6b6b;
+  margin-right: 10px;
+}
+
+/* Colonne droite */
+.profile-right {
+  flex: 2;
+}
+
+.profile-right h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.profile-right ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-right ul li i {
+  color: #f161c6;
+  margin-right: 10px;
+}
+
+.profile-right p {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .profile-container {
+    flex-direction: row; /* Deux colonnes */
+  }
+
+  .profile-left {
+    text-align: left;
+  }
+
+  .profile-photo img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profile-container {
+    padding: 40px;
+  }
+
+  .profile-right h2 {
+    font-size: 1.8em;
+  }
+
+  .profile-right ul li {
+    font-size: 1.2em;
+  }
+}
+/* Bouton Réserver mamie- Mobile  */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.btn-reserve {
+    background-color: #7f674d;
+    color: white;
+    padding: 10px 15px; /* Taille adaptée aux écrans mobiles */
+    font-size: 1em; /* Police plus petite pour mobiles */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Supprime le soulignement des liens */
+    display: inline-block;
+        width: auto;
+    height: auto;
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+}
+.btn-reserve:active {
+    background-color: #7f674d;
+    transform: translateY(0);
+}
+
+/* Tablette - Écrans à partir de 768px */
+@media (min-width: 768px) {
+    .btn-reserve {
+        font-size: 0.9em; /* Réduction de la taille de la police pour tablette */
+        padding: 8px 12px; /* Padding plus compact */
+    }
+}
+
+/* PC - Écrans à partir de 1024px */
+@media (min-width: 1024px) {
+    .btn-reserve {
+        font-size: 16px; /* Réduction pour une apparence plus discrète */
+        padding: 6px 15px; /* Taille adaptée aux écrans larges */
+    }
+}

@@ -1,0 +1,165 @@
+/* style pour mobile Global styles */ 
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #484237;
+} */
+/* Header styles */
+/* parceque barre de scroll en bas solution pour eliminer: */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche les débordements horizontaux */
+}
+.hero {
+    background-color: #f7efe0;
+    color: #333;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+  }
+
+h1, h2, h3 {
+    color: #7f674d;
+    margin-bottom: 10px;
+}
+
+.container-columns {
+    display: flex;
+    flex-direction: column; /* Empile les colonnes par défaut */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Colonne Texte */
+.column-text {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.column-text h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.column-text ol {
+    padding-left: 20px;
+}
+
+.column-text ol li {
+    margin-bottom: 10px;
+}
+
+/* Paiement Info */
+.payment-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.payment-info ul {
+    list-style: disc inside;
+    margin-top: 10px;
+}
+
+/* Colonne Aside */
+.column-aside {
+    background-color: #f9f6f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.column-aside h3 {
+    margin-bottom: 15px;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-search {
+    background-color: #7f674d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+    background-color: #5c4936;
+}
+ /* style pour tablettes */
+ @media (min-width: 768px) {
+    .container-columns {
+        flex-direction: row; /* Passe en disposition côte à côte */
+        gap: 30px; /* Espacement entre les colonnes */
+    }
+
+    .column-text {
+        flex: 2; /* Texte plus large */
+    }
+
+    .column-aside {
+        flex: 1; /* Aside moins large */
+    }
+}
+ /* style pour ordi */
+
+ @media (min-width: 1024px) {
+    
+        .hero h1 {
+          font-size: 2.5em;
+        }
+      
+        .hero p {
+          font-size: 1.5em;
+        }
+    .container-columns {
+        max-width: 1200px; /* Largeur maximale pour centrer le contenu */
+        margin: 0 auto; /* Centre le container */
+    }
+
+    .column-text h1 {
+        font-size: 28px;
+    }
+
+    .filter-group input,
+    .filter-group select {
+        font-size: 16px;
+    }
+
+    .btn-search {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+}
