@@ -1,14 +1,21 @@
 
 <?php
-
 function getDatabaseConnection()
 {
-    $dsn = "mysql:host=localhost;dbname=mamie4family;charset=utf8";
-    $username = "root";
-    $password = "";
+    $configPath = __DIR__ . '/../config.php';
+    if (!file_exists($configPath)) {
+        die('Configuration manquante : créez config.php à partir de config.example.php');
+    }
+    $config = require $configPath;
+
+    $dsn = sprintf("mysql:host=%s;dbname=%s;charset=%s",
+        $config['db_host'],
+        $config['db_name'],
+        $config['db_charset'] ?? 'utf8mb4'
+    );
 
     try {
-        $pdo = new PDO($dsn, $username, $password, [
+        $pdo = new PDO($dsn, $config['db_user'], $config['db_pass'], [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         ]);
@@ -17,7 +24,3 @@ function getDatabaseConnection()
         die("Erreur de connexion : " . $e->getMessage());
     }
 }
-?>
-
-
-
